@@ -1,0 +1,2 @@
+Planets		dt		Steps		Allowed_Values
+12		1		36500		10

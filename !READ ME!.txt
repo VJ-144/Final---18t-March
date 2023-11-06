@@ -1,0 +1,58 @@
+INSTRUCTIONS
+
+4 Text files are required for this program
+
+The program can ONLY be run through the play button after changing the run configuration.
+
+To do this go to:
+		-> Run
+		-> Configuration per file...
+		
+		Enter all file names with spacing between in the order mentioned below. This will allow
+		the simulation to run via the green run button.
+
+
+1st File ---> 	1-System_Parameters.txt
+		
+		The required inputs for this file are:
+		
+		Number of Planets: The number of objects in the simulation, this inclues the Sun
+				   and must be larger than 1.
+		dt: The timesteps being used.
+		Step: The number of interations the program will run for.
+		Allowed_Values: Allows the size of the VMD file to be controlled, planet positional data for multiplies
+		of this number will be printed to the VMD file
+		
+		NOTE: The values of dt and Step must be changed to the correct ratio, at least 5
+		      waves should be visable on the energy flucuation graph for an accurate simulation.
+
+
+2nd File --->	2-Initial_Conditions.txt
+		
+		This includes all the starting position, velocity, mass and object names in the simulation.
+		It is formated as: <Planet Name> <m> <x1> <x2> <x3> <v1> <v2> <v3> per line.
+		where xi and vi represent components of position and velocity.
+		
+		All the Moons of planets should be placed after the planet they orbit. They must all also be named "Moon",
+		the capitalisation of "M" is important.
+		
+		The units used in the program are kg, AU and days, the input data must reflect this.
+
+
+3rd File ---> 	3-VMD_Data.txt
+		
+		This is the output positional data for all planets in XYZ format. The file is for the 
+		simulation of the system on VMD. The iteration values printed to this file can
+		be controlled by the Allowed_Values parameter in 1-System Parameters.txt
+
+
+4th File --->	4-Observables_Data.txt
+
+		This includes all simulated data generated from programme. It includes the planets/moons apsides
+		and periods. It also includes the systems global properties such as total kinetic energy, total
+		potential energy, total energy, energy fluctuation and simulation length.
+
+		Units for Apsides are AU, periods are days, simulation length is years and all energies are in joules
+		
+
+
